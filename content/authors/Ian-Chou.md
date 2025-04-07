@@ -1,5 +1,5 @@
 ---
 name: Ian Chou
-avatar: /uploads/ian-chou.png
+avatar: /uploads/Heathrow_illustration_ian_chou.png
 ---
 
