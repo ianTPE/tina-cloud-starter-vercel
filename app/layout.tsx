@@ -3,6 +3,7 @@ import { Metadata } from "next";
 import { Inter as FontSans, Lato, Nunito } from "next/font/google";
 import { cn } from "@/lib/utils";
 import client from "@/tina/__generated__/client";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import "@/styles.css";
 
@@ -63,6 +64,7 @@ export default async function RootLayout({
         className={cn("min-h-screen flex flex-col antialiased", fontVariable)}
       >
         {children}
+        <SpeedInsights />
       </body>
     </html>
   );
