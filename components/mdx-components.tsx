@@ -2,10 +2,10 @@ import { format } from 'date-fns';
 import React from 'react';
 import { Components, TinaMarkdown, TinaMarkdownContent } from 'tinacms/dist/rich-text';
 import Image from 'next/image';
-import { Prism } from 'tinacms/dist/rich-text/prism';
 import { Video } from './blocks/video';
 import { PageBlocksVideo } from '@/tina/__generated__/types';
 import { mermaid } from './blocks/mermaid';
+import { PrismCodeBlock } from './blocks/PrismCodeBlock';
 
 export const components: Components<{
   BlockQuote: {
@@ -27,7 +27,7 @@ export const components: Components<{
     if (!props) {
       return <></>;
     }
-    return <Prism lang={props.lang} value={props.value} />;
+    return <PrismCodeBlock lang={props.lang} value={props.value} />;
   },
   BlockQuote: (props: {
     children: TinaMarkdownContent;
