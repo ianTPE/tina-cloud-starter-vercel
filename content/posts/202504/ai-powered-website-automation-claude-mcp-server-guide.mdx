@@ -20,7 +20,23 @@ date: 2025-04-10T16:00:00.000Z
 
 有趣的是，我發現自己越來越少使用傳統的 Google 搜尋了。今天要安裝 Vercel MCP Server 時，我的第一反應是打開 ChatGPT search、Perplexity、Felo 和秘塔搜索。Perplexity 迅速給出了如何在 Claude desktop 中配置 MCP Server 的答案：
 
-jsx{  "mcpServers": {    "vercel": {      "command": "npx",      "args": \[        "--package",        "@vercel/sdk",        "mcp",        "start",        "--bearer-token",        "\<YOUR\_BEARER\_TOKEN>"      ]    }  }}
+```json
+{
+  "mcpServers": {
+    "vercel": {
+      "command": "npx",
+      "args": [
+        "--package",
+        "@vercel/sdk",
+        "mcp",
+        "start",
+        "--bearer-token",
+        "<YOUR_BEARER_TOKEN>"
+      ]
+    }
+  }
+}
+```
 
 ## Vercel MCP Server：AI 建站的第一步
 
@@ -36,7 +52,23 @@ Vercel MCP Server 啟動後，我讓它自動部署一個 Next.js AI chatbot。�
 
 這個 MCP Server 需要在 Docker 中啟動，於是我安裝了 Docker desktop 並配置了相應的 Token：
 
-jsx{  "mcpServers": {    "github": {      "command": "docker",      "args": \[        "run",        "-i",        "--rm",        "-e",        "GITHUB\_PERSONAL\_ACCESS\_TOKEN=\<YOUR\_TOKEN>",        "ghcr.io/github/github-mcp-server"      ]    }  }}
+```json
+{
+  "mcpServers": {
+    "github": {
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "-e",
+        "GITHUB_PERSONAL_ACCESS_TOKEN=<YOUR_TOKEN>",
+        "ghcr.io/github/github-mcp-server"
+      ]
+    }
+  }
+}
+```
 
 GitHub MCP Server 順利啟動了！✨
 
@@ -58,7 +90,16 @@ GitHub MCP Server 順利啟動了！✨
 
 經過調查，我找到了解決方案—需要添加 CLI Exec Server：
 
-jsx{  "mcpServers": {    "mcp-cli-exec": {      "command": "npx",      "args": \["-y", "mcp-cli-exec"]    }  }}
+```json
+{
+  "mcpServers": {
+    "mcp-cli-exec": {
+      "command": "npx",
+      "args": ["-y", "mcp-cli-exec"]
+    }
+  }
+}
+```
 
 加上這個配置後，Claude 終於可以自動控制 git clone 了，它成功地在本地建立了目錄。
 
