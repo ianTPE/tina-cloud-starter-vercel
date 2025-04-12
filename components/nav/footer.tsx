@@ -13,7 +13,6 @@ import {
 } from "react-icons/fa6";
 import { AiFillInstagram } from "react-icons/ai";
 import { useLayout } from "../layout/layout-context";
-import { RawRenderer } from "../raw-renderer";
 import type { IconType } from "react-icons";
 
 export default function Footer() {
@@ -114,7 +113,6 @@ export default function Footer() {
               )}
             </div>
           )}
-          <RawRenderer parentColor={footer!.color} rawData={pageData} />
         </div>
         <div
           className={cn(

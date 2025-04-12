@@ -1,11 +1,11 @@
 {
   "header": {
     "icon": {
-      "name": "Tina",
+      "name": "BiSolidBowlHot",
       "color": "orange",
       "style": "float"
     },
-    "name": "Tina Starter",
+    "name": "Ian's Blog",
     "color": "default",
     "nav": [
       {
@@ -34,7 +34,7 @@
     }
   },
   "theme": {
-    "color": "blue",
+    "color": "teal",
     "font": "sans",
     "darkMode": "light"
   }
