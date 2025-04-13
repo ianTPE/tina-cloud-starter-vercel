@@ -9,7 +9,11 @@ author: content/authors/Ian-Chou.md
 date: 2025-04-12T16:00:00.000Z
 ---
 
-發布日期：2025年4月13日 | 閱讀時間：8分鐘 | 分類：前端開發、開發者工具、自動化部署
+## 簡介
+
+當失眠遇上開發靈感，會碰撞出怎樣的火花？本文記錄了一位全棧開發者在深夜探索 Docusaurus、前端框架選擇、自動化部署以及 AI 輔助開發的真實歷程。從 MDX 與 JSX 的思辨、網頁複製工具的挫折，到 AI 控制桌面應用的嘗試，這段技術冒險不僅展現了現代開發者面臨的選擇困境，也揭示了一個重要的開發哲學：有時候，找到合適的參考比無止境的技術比較更為重要。無論你是資深開發者還是新手，這篇文章都能讓你在技術選擇的迷霧中找到一絲方向。
+
+*發布日期：2025年4月13日 | 閱讀時間：8分鐘 | 分類：前端開發、開發者工具、自動化部署*
 
 ## 失眠催生的創意
 
@@ -25,7 +29,7 @@ date: 2025-04-12T16:00:00.000Z
 
 說實話，我一開始只是想確認 Docusaurus 是否支援部落格功能。結果這一查不要緊，我整個人都被吸進這個兔子洞裡了！
 
-安裝過程出奇地順利，我還記得當 npm start 命令執行成功，瀏覽器自動開啟那個簡潔而優雅的預設頁面時，我差點在椅子上跳起來！
+安裝過程出奇地順利，我還記得當 `npm start` 命令執行成功，瀏覽器自動開啟那個簡潔而優雅的預設頁面時，我差點在椅子上跳起來！
 
 「它不僅支援部落格，還支援得相當不錯嘛！」
 
@@ -72,19 +76,37 @@ MDX 的組合讓我眼前一亮——Markdown 的簡潔加上 JSX 的靈活性�
 
 ### 方案一：AutoHotkey
 
-autohotkey; 假設 ChatGPT Desktop App 的視窗標題包含 "ChatGPT"SetTitleMatchMode, 2WinActivate, ChatGPT  ; 激活 ChatGPT 視窗WinWaitActive, ChatGPTSend, {Enter}Hello World!{Enter}  ; 發送 Prompt
+```autohotkey
+; 假設 ChatGPT Desktop App 的視窗標題包含 "ChatGPT"
+SetTitleMatchMode, 2
+WinActivate, ChatGPT  ; 激活 ChatGPT 視窗
+WinWaitActive, ChatGPT
+Send, {Enter}Hello World!{Enter}  ; 發送 Prompt
+```
 
 輕量級、無需開發環境，聽起來不錯，對吧？但需要手動賦予管理員權限，而且不總是能準確鎖定視窗。
 
 ### 方案二：Python + PyWinAuto
 
-pythonfrom pywinauto import Applicationapp = Application(backend="uia").connect(title\_re=".\*ChatGPT.\*")dlg = app.window()dlg.type\_keys("^a")          # Ctrl+A (全選輸入框)dlg.type\_keys("Hello World") # 輸入文字dlg.type\_keys("{ENTER}")     # 送出
+```python
+from pywinauto import Application
+app = Application(backend="uia").connect(title_re=".*ChatGPT.*")
+dlg = app.window()
+dlg.type_keys("^a")          # Ctrl+A (全選輸入框)
+dlg.type_keys("Hello World") # 輸入文字
+dlg.type_keys("{ENTER}")     # 送出
+```
 
 看起來更專業了，但仍然存在不穩定的問題。
 
 ### 方案三：Electron App 的進階控制
 
-pythonimport websocketsasync def send\_prompt():    async with websockets.connect("ws\://localhost:9222/devtools/page/...") as ws:        await ws.send('Input.value = "Hello World";')
+```python
+import websockets
+async def send_prompt():
+    async with websockets.connect("ws://localhost:9222/devtools/page/...") as ws:
+        await ws.send('Input.value = "Hello World";')
+```
 
 這個理論上會穩定一點，但當我滿懷期待地測試這個方案時，一個殘酷的現實浮現出來：微軟已經封鎖了連接 ChatGPT Desktop App 的路徑。
 
@@ -118,6 +140,6 @@ pythonimport websocketsasync def send\_prompt():    async with websockets.connec
 
 而現在，是時候讓這個疲憊但充實的大腦休息一下了。
 
-***
+---
 
-寫於深夜的咖啡館，伴隨著窗外的雨聲和鍵盤的敲擊聲。
+*寫於深夜的咖啡館，伴隨著窗外的雨聲和鍵盤的敲擊聲。*
