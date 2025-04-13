@@ -79,7 +79,7 @@ export const PrismCodeBlock: React.FC<CodeBlockProps> = ({
       >
         {({ className, style, tokens, getLineProps, getTokenProps }) => (
           <pre
-            className={`${className} p-4 pt-12 rounded-lg overflow-auto shadow-md font-mono text-sm`}
+            className={`${className} p-4 pt-4 rounded-lg overflow-auto shadow-md font-mono text-sm`}
             style={{
               ...style,
               fontFamily:
