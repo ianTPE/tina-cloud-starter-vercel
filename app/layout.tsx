@@ -25,8 +25,11 @@ const lato = Lato({
 });
 
 export const metadata: Metadata = {
-  title: "Tina",
-  description: "Tina Cloud Starter",
+  title: {
+    default: "ian's Blog", // 默認標題
+    template: "%s | aipowered.top", // 標題模板，%s 會被頁面標題替換
+  },
+  description: "I like the MCPs.",
 };
 
 export default async function RootLayout({
