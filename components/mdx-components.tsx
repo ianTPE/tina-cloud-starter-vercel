@@ -22,6 +22,7 @@ export const components: Components<{
     disclaimer?: TinaMarkdownContent;
   };
   video: PageBlocksVideo;
+  Warning: { children: TinaMarkdownContent };
 }> = {
   code_block: (props) => {
     if (!props) {
@@ -127,4 +128,10 @@ export const components: Components<{
   video: (props) => {
     return <Video data={props} />;
   },
+  Warning: (props) => (
+    <div className="bg-amber-100 border-l-4 border-amber-500 text-amber-700 p-4 my-4">
+      <p className="font-bold">警告</p>
+      <TinaMarkdown content={props.children} components={{ mermaid }} />
+    </div>
+  ),
 };
