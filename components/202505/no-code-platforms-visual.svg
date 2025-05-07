@@ -1,0 +1,159 @@
+<svg viewBox="0 0 900 700" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="900" height="700" fill="#f8f9fa" rx="10" ry="10" />
+  
+  <!-- 標題 -->
+  <text x="450" y="40" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle">低程式碼/無程式碼平台自由職業機會排名</text>
+  
+  <!-- 圖例 -->
+  <g transform="translate(700, 80)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="16" font-weight="bold">需求程度</text>
+    
+    <rect x="0" y="20" width="20" height="20" fill="#3366CC" rx="3" ry="3" />
+    <text x="30" y="35" font-family="Arial, sans-serif" font-size="14">非常高</text>
+    
+    <rect x="0" y="50" width="20" height="20" fill="#66AA33" rx="3" ry="3" />
+    <text x="30" y="65" font-family="Arial, sans-serif" font-size="14">高</text>
+    
+    <rect x="0" y="80" width="20" height="20" fill="#FFCC33" rx="3" ry="3" />
+    <text x="30" y="95" font-family="Arial, sans-serif" font-size="14">中等</text>
+    
+    <rect x="0" y="110" width="20" height="20" fill="#FF9933" rx="3" ry="3" />
+    <text x="30" y="125" font-family="Arial, sans-serif" font-size="14">利基市場</text>
+    
+    <rect x="0" y="140" width="20" height="20" fill="#CC6666" rx="3" ry="3" />
+    <text x="30" y="155" font-family="Arial, sans-serif" font-size="14">有限</text>
+    
+    <text x="0" y="185" font-family="Arial, sans-serif" font-size="16" font-weight="bold">排名來源</text>
+    
+    <circle cx="10" cy="215" r="8" fill="#3366CC" />
+    <text x="30" y="220" font-family="Arial, sans-serif" font-size="14">排名 1</text>
+    
+    <circle cx="10" cy="245" r="8" fill="#66AA33" />
+    <text x="30" y="250" font-family="Arial, sans-serif" font-size="14">排名 2</text>
+    
+    <circle cx="10" cy="275" r="8" fill="#FFCC33" />
+    <text x="30" y="280" font-family="Arial, sans-serif" font-size="14">排名 3</text>
+  </g>
+  
+  <!-- X軸 -->
+  <line x1="100" y1="600" x2="650" y2="600" stroke="#333" stroke-width="2" />
+  <text x="375" y="635" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">平台</text>
+  
+  <!-- Y軸 -->
+  <line x1="100" y1="120" x2="100" y2="600" stroke="#333" stroke-width="2" />
+  <text x="60" y="360" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" transform="rotate(-90, 30, 360)">排名 (越低越好)</text>
+  
+  <!-- Y軸刻度 -->
+  <line x1="95" y1="150" x2="105" y2="150" stroke="#333" stroke-width="2" />
+  <text x="85" y="155" font-family="Arial, sans-serif" font-size="12" text-anchor="end">1</text>
+  
+  <line x1="95" y1="210" x2="105" y2="210" stroke="#333" stroke-width="2" />
+  <text x="85" y="215" font-family="Arial, sans-serif" font-size="12" text-anchor="end">2</text>
+  
+  <line x1="95" y1="270" x2="105" y2="270" stroke="#333" stroke-width="2" />
+  <text x="85" y="275" font-family="Arial, sans-serif" font-size="12" text-anchor="end">3</text>
+  
+  <line x1="95" y1="330" x2="105" y2="330" stroke="#333" stroke-width="2" />
+  <text x="85" y="335" font-family="Arial, sans-serif" font-size="12" text-anchor="end">4</text>
+  
+  <line x1="95" y1="390" x2="105" y2="390" stroke="#333" stroke-width="2" />
+  <text x="85" y="395" font-family="Arial, sans-serif" font-size="12" text-anchor="end">5</text>
+  
+  <line x1="95" y1="450" x2="105" y2="450" stroke="#333" stroke-width="2" />
+  <text x="85" y="455" font-family="Arial, sans-serif" font-size="12" text-anchor="end">6</text>
+  
+  <line x1="95" y1="510" x2="105" y2="510" stroke="#333" stroke-width="2" />
+  <text x="85" y="515" font-family="Arial, sans-serif" font-size="12" text-anchor="end">7</text>
+  
+  <line x1="95" y1="570" x2="105" y2="570" stroke="#333" stroke-width="2" />
+  <text x="85" y="575" font-family="Arial, sans-serif" font-size="12" text-anchor="end">8</text>
+  
+  <!-- 平台與數據點 -->
+  <!-- Bubble -->
+  <g transform="translate(130, 150)">
+    <rect x="-25" y="-10" width="50" height="440" fill="#f0f0f0" opacity="0.3" />
+    <circle cx="0" cy="0" r="10" fill="#3366CC" />
+    <circle cx="0" cy="0" r="10" fill="#66AA33" />
+    <circle cx="0" cy="0" r="10" fill="#FFCC33" />
+    <text x="0" y="460" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" font-weight="bold">Bubble</text>
+    <rect x="-25" y="480" width="50" height="20" fill="#3366CC" rx="3" ry="3" />
+  </g>
+  
+  <!-- Webflow -->
+  <g transform="translate(190, 210)">
+    <rect x="-25" y="-70" width="50" height="440" fill="#f0f0f0" opacity="0.3" />
+    <circle cx="0" cy="0" r="10" fill="#3366CC" />
+    <circle cx="0" cy="0" r="10" fill="#66AA33" />
+    <circle cx="0" cy="0" r="10" fill="#FFCC33" />
+    <text x="0" y="400" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" font-weight="bold">Webflow</text>
+    <rect x="-25" y="420" width="50" height="20" fill="#3366CC" rx="3" ry="3" />
+  </g>
+  
+  <!-- Airtable -->
+  <g transform="translate(250, 270)">
+    <rect x="-25" y="-130" width="50" height="440" fill="#f0f0f0" opacity="0.3" />
+    <circle cx="0" cy="0" r="10" fill="#3366CC" />
+    <circle cx="0" cy="300" r="10" fill="#66AA33" />
+    <circle cx="0" cy="60" r="10" fill="#FFCC33" />
+    <text x="0" y="340" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" font-weight="bold">Airtable</text>
+    <rect x="-25" y="360" width="50" height="20" fill="#66AA33" rx="3" ry="3" />
+  </g>
+  
+  <!-- Zapier -->
+  <g transform="translate(310, 330)">
+    <rect x="-25" y="-190" width="50" height="440" fill="#f0f0f0" opacity="0.3" />
+    <circle cx="0" cy="0" r="10" fill="#3366CC" />
+    <circle cx="0" cy="-60" r="10" fill="#FFCC33" />
+    <text x="0" y="280" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" font-weight="bold">Zapier</text>
+    <rect x="-25" y="300" width="50" height="20" fill="#66AA33" rx="3" ry="3" />
+  </g>
+  
+  <!-- Zoho Creator -->
+  <g transform="translate(370, 390)">
+    <rect x="-25" y="-250" width="50" height="440" fill="#f0f0f0" opacity="0.3" />
+    <circle cx="0" cy="0" r="10" fill="#3366CC" />
+    <text x="0" y="220" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" font-weight="bold">Zoho Creator</text>
+    <rect x="-25" y="240" width="50" height="20" fill="#FFCC33" rx="3" ry="3" />
+  </g>
+  
+  <!-- Caspio -->
+  <g transform="translate(430, 450)">
+    <rect x="-25" y="-310" width="50" height="440" fill="#f0f0f0" opacity="0.3" />
+    <circle cx="0" cy="0" r="10" fill="#3366CC" />
+    <text x="0" y="160" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" font-weight="bold">Caspio</text>
+    <rect x="-25" y="180" width="50" height="20" fill="#FFCC33" rx="3" ry="3" />
+  </g>
+  
+  <!-- Adalo -->
+  <g transform="translate(490, 270)">
+    <rect x="-25" y="-130" width="50" height="440" fill="#f0f0f0" opacity="0.3" />
+    <circle cx="0" cy="0" r="10" fill="#66AA33" />
+    <text x="0" y="340" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" font-weight="bold">Adalo</text>
+    <rect x="-25" y="360" width="50" height="20" fill="#66AA33" rx="3" ry="3" />
+  </g>
+  
+  <!-- MS Power Apps -->
+  <g transform="translate(550, 330)">
+    <rect x="-25" y="-190" width="50" height="440" fill="#f0f0f0" opacity="0.3" />
+    <circle cx="0" cy="0" r="10" fill="#66AA33" />
+    <text x="0" y="280" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" font-weight="bold">Power Apps</text>
+    <rect x="-25" y="300" width="50" height="20" fill="#66AA33" rx="3" ry="3" />
+  </g>
+  
+  <!-- Retool -->
+  <g transform="translate(610, 390)">
+    <rect x="-25" y="-250" width="50" height="440" fill="#f0f0f0" opacity="0.3" />
+    <circle cx="0" cy="0" r="10" fill="#FFCC33" />
+    <text x="0" y="220" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" font-weight="bold">Retool</text>
+    <rect x="-25" y="240" width="50" height="20" fill="#FFCC33" rx="3" ry="3" />
+  </g>
+  
+  <!-- 摘要 -->
+  <g transform="translate(100, 650)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="16" font-weight="bold">主要發現:</text>
+    <text x="0" y="25" font-family="Arial, sans-serif" font-size="14">● Bubble 和 Webflow 在所有排名中都位居首位，是自由職業者的最佳選擇</text>
+    <text x="0" y="50" font-family="Arial, sans-serif" font-size="14">● Airtable 和 Zapier 也顯示出高度的市場需求，特別適合工作流程自動化</text>
+    <text x="0" y="75" font-family="Arial, sans-serif" font-size="14">● 專注於企業解決方案的平台在自由職業市場中的需求較低</text>
+  </g>
+</svg>
