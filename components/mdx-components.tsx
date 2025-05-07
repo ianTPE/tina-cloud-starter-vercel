@@ -6,6 +6,7 @@ import { Video } from './blocks/video';
 import { PageBlocksVideo } from '@/tina/__generated__/types';
 import { mermaid } from './blocks/mermaid';
 import { PrismCodeBlock } from './blocks/PrismCodeBlock';
+import LowCodeMarketDiagram from './202505/low-code-market-diagram';
 
 export const components: Components<{
   BlockQuote: {
@@ -134,4 +135,5 @@ export const components: Components<{
       <TinaMarkdown content={props.children} components={{ mermaid }} />
     </div>
   ),
+  LowCodeMarketDiagram: () => <LowCodeMarketDiagram />,
 };
