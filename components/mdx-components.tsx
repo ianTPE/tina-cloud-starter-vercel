@@ -2,11 +2,13 @@ import { format } from 'date-fns';
 import React from 'react';
 import { Components, TinaMarkdown, TinaMarkdownContent } from 'tinacms/dist/rich-text';
 import Image from 'next/image';
+import dynamic from 'next/dynamic';
 import { Video } from './blocks/video';
 import { PageBlocksVideo } from '@/tina/__generated__/types';
 import { mermaid } from './blocks/mermaid';
 import { PrismCodeBlock } from './blocks/PrismCodeBlock';
-import LowCodeMarketDiagram from './202505/low-code-market-diagram';
+
+const LowCodeMarketDiagram = dynamic(() => import('./202505/low-code-market-diagram'), { ssr: false });
 
 export const components: Components<{
   BlockQuote: {
