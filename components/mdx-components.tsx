@@ -24,6 +24,7 @@ export const components: Components<{
   };
   video: PageBlocksVideo;
   Warning: { children: TinaMarkdownContent };
+  LowCodeMarketDiagram: {};
 }> = {
   code_block: (props) => {
     if (!props) {
